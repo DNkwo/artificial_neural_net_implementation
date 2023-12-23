@@ -7,8 +7,12 @@
 
 Neuron::Neuron(double val)
 {
-    this->val = val;
+    setVal(val);
+}
 
+void Neuron::setVal(double val)
+{
+    this->val = val;
     //we've used fixed activation functions at the moment
     activate(Activation::fastSigmoid); //activates value
     derive(Activation::fastSigmoidDerivative); //then finds derivate value

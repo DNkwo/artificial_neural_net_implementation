@@ -15,10 +15,13 @@ class Neuron
         //constructor
         Neuron(double val);
 
+        //set value
+        void setVal(double val);
+
         void activate(double (*activationFunction)(double));
 
         void derive(double (*derivativeFunction)(double));
-        
+
         //getters
         double getVal() { return this-> val; }
         double getActivatedVal() { return this->activatedVal; }
