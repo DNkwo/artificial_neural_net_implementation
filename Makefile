@@ -8,10 +8,10 @@ CXXFLAGS=-Iinclude -std=c++11 -Wall
 TARGET=mainW
 
 # Define object files
-OBJ=main.o neuron.o activation.o matrix.o layer.o neuralnetwork.o
+OBJ=main.o neuron.o utils.o matrix.o layer.o neuralnetwork.o
 
 # Define header files
-DEPS=include/neuron.h include/activation.h include/layer.h include/neuron.h include/matrix.h include/neuralnetwork.h
+DEPS=include/neuron.h include/utils/utils.h include/layer.h include/neuron.h include/matrix.h include/neuralnetwork.h
 
 # Define the rule for making the target
 $(TARGET): $(OBJ)

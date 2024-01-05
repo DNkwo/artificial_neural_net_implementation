@@ -1,7 +1,7 @@
 //neuron.cpp
 
 #include "include/neuron.h"
-#include "include/activation.h"
+#include "include/utils/utils.h"
 
 //Constructor
 
@@ -14,8 +14,8 @@ void Neuron::setVal(double val)
 {
     this->val = val;
     //we've used fixed activation functions at the moment
-    activate(Activation::fastSigmoid); //activates value
-    derive(Activation::fastSigmoidDerivative); //then finds derivate value
+    activate(utils::Utils::fastSigmoid); //activates value
+    derive(utils::Utils::fastSigmoidDerivative); //then finds derivate value
 }
 
 //Fast Sigmoid Function (easy to get derivative)
